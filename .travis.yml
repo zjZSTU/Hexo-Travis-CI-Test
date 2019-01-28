@@ -14,7 +14,6 @@ before_install:
   - npm install -g hexo-cli
 
 install:
-  - pwd
   - cd ./blogs/
   - npm install
 
@@ -30,7 +29,7 @@ script:
   - hexo generate
 
 deploy:
-  local-dir: ./public
+  local-dir: ./blogs/public
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_REPO_TOKEN  # Set in the settings page of your repository, as a secure variable
