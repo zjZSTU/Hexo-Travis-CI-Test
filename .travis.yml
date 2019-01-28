@@ -23,12 +23,12 @@ before_script:
 # - git clone git://github.com/heroicyang/hexo-theme-modernist.git themes/modernist
 
 script:
-  - cd blogs
+  - cd ./blogs/
   - hexo clean
   - hexo generate
 
 deploy:
-  local-dir: public
+  local-dir: ./public
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_REPO_TOKEN  # Set in the settings page of your repository, as a secure variable
